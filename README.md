@@ -6,7 +6,21 @@ Overrides built-in `(image:)` Kirbytag. Keeps all normal functionality as of [Ki
 
 ## Usage
 
-Download and place the folder in your Kirby project's `site/plugins` folder. Works out of the box with all uploaded image files displayed with the `(image:)` Kirbytag. Optionally set options listed below in `site/config/config.php`.
+Download and place the folder in your Kirby project's `site/plugins` folder. Works out of the box with all uploaded image files displayed with the `(image:)` Kirbytag. Add a `maxwidth: int` argument to set a custom maxwidth for one image.
+
+Example in a kirbytext field:
+
+```
+
+This is a textarea that will be rendered with Kirbytext in a template using the global maxwidth option. This is the default tag, and all images inserted by the button above a textarea will automatically use this.
+
+(image: example.jpeg)
+
+And this next one sets its own maxwith, for example to make sure the original size of an image is displayed. The image itself will be re-compressed on the server.
+
+(image: example2.jpeg maxwidth: 5000)
+
+```
 
 ## Options
 
