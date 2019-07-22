@@ -1,6 +1,6 @@
 # Replacement Kirby 3 (image:) Kirbytag that re-encodes all displayed images to fix iPhone rotation and save bandwidth
 
-Overrides built-in `(image:)` Kirbytag. Keeps all normal functionality as of [Kirby 3.2.2](https://github.com/getkirby/kirby/blob/3.2.2/config/tags.php#L79-L144), while re-encoding all displayed images in Kirbytext fields to make sure they have the correct orientation, and optionally compress to a maximum width to save bandwidth.
+Overrides built-in `(image:)` Kirbytag. Keeps all normal functionality as of [Kirby 3.2.2](https://github.com/getkirby/kirby/blob/3.2.2/config/tags.php#L79-L144), while re-encoding all displayed images in Kirbytext fields to make sure they have the correct orientation, and optionally resizing to a maximum width to save bandwidth.
 
 **The problem:** Photos uploaded from iOS can appear incorrectly rotated in many major browsers (Chrome, Firefox, Safari on Mac), because they use EXIF data for rotation that isn't parsed automatically. This plugin applies Kirby's built-in thumb() processor to re-encode images as JPEG with minimal loss in quality. It can also reduce large images to a maximum width (default 2000px) to save bandwidth.
 
