@@ -24,13 +24,8 @@ Kirby::plugin('splendorr/imagetag', [
       'html' => function ($tag) {
         if ($tag->file = $tag->file($tag->value)) {
           $maxwidth = $tag->maxwidth ?? option('splendorr.imagetag.maxwidth');
-          if ($tag->file->width() > $maxwidth) {
-            $thumbwidth = $maxwidth;
-          } else {
-            $thumbwidth = $tag->file->width();
-          }
           $thumb = $tag->file->thumb([
-            'width' => $thumbwidth,
+            'width' => $maxwidth,
             'autoOrient' => true,
             'quality'    => option('splendorr.imagetag.quality'),
           ]);
