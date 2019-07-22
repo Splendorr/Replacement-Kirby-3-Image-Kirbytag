@@ -22,6 +22,8 @@ button above a textarea will automatically use this.
 And this next one sets its own maxwith, for example to make sure 
 the original size of an image is displayed. 
 The image itself will be re-compressed on the server.
+This doesn't affect CSS layout, and you can still use the
+built-in width: option to style images inline.
 
 (image: example2.jpeg maxwidth: 5000)
 
