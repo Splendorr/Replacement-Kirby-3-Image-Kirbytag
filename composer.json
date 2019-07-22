@@ -1,12 +1,16 @@
 {
   "name": "splendorr/imagetag",
   "description": "Replacement Kirby 3 (image:) Kirbytag that re-encodes all displayed images to fix iPhone rotation and save bandwidth",
+  "type": "kirby-plugin",
   "license": "MIT",
   "authors": [
     {
       "name": "Nick Splendorr",
       "email": "nick@splendorr.com",
-      "homepage": "https://splendorr.com"
+      "homepage": "http://splendorr.com"
     }
-]
+  ],
+  "require": {
+    "getkirby/composer-installer": "^1.1"
+  }
 }
