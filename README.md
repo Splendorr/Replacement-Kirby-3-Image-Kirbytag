@@ -4,9 +4,11 @@ Overrides built-in `(image:)` Kirbytag. Keeps all normal functionality as of [Ki
 
 **The problem:** Photos uploaded from iOS can appear incorrectly rotated in many major browsers (Chrome, Firefox, Safari on Mac), because they use EXIF data for rotation that isn't parsed automatically. This plugin applies Kirby's built-in thumb() processor to re-encode images as JPEG with minimal loss in quality. It can also reduce large images to a maximum width (default 2000px) to save bandwidth.
 
-## Usage
+## Installation
 
-Download and place the folder in your Kirby project's `site/plugins` folder. Works out of the box with all uploaded image files displayed with the `(image:)` Kirbytag. Add a `maxwidth: int` argument to set a custom maxwidth for one image.
+Download the repository, extract it, and place the folder in your Kirby project's `site/plugins` folder. Works out of the box with all uploaded image files displayed with the `(image:)` Kirbytag. Add a `maxwidth: int` argument to set a custom maxwidth for one image.
+
+## Usage
 
 Example in a kirbytext field:
 
