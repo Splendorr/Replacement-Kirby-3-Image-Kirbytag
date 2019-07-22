@@ -32,9 +32,14 @@ The image itself will be re-compressed on the server.
 You can change options in `/site/config/config.php`:
 ```php
 return [
-  // Maxwidth defaults to 2000px wide. Set to a large number like 10000 if you want to always display your images at their original resolution
+  // Maxwidth defaults to 2000px wide. Set to a large number like 
+  // 10000 if you want to always display your images at their 
+  // original resolution
   'splendorr.imagetag.maxwidth' => 2000,
-  // Quality defaults to 90%. I found that setting it to 100 results in files that are twice the size of the original iOS photo, while the default of 90 produces a slightly-smaller file at the same dimensions without visible compression artifacts.
+  // Quality defaults to 90%. I found that setting it to 100 results 
+  // in files that are twice the size of the original iOS photo, 
+  // while the default of 90 produces a slightly-smaller file at 
+  // the same dimensions without visible compression artifacts.
   'splendorr.imagetag.quality' => 90,
 ];
 ```
