@@ -23,12 +23,16 @@ Kirby::plugin('splendorr/imagetag', [
       ],
       'html' => function ($tag) {
         if ($tag->file = $tag->file($tag->value)) {
-          $maxwidth = $tag->maxwidth ?? option('splendorr.imagetag.maxwidth');
-          $thumb = $tag->file->thumb([
-            'width' => $maxwidth,
-            'autoOrient' => true,
-            'quality'    => option('splendorr.imagetag.quality'),
-          ]);
+          if ($tag->file->extension() === 'gif') {
+            $thumb = $tag->file->url();
+          } else {
+            $maxwidth = $tag->maxwidth ?? option('splendorr.imagetag.maxwidth');
+            $thumb = $tag->file->thumb([
+              'width' => $maxwidth,
+              'autoOrient' => true,
+              'quality'    => option('splendorr.imagetag.quality'),
+            ]);
+          }
           $tag->src     = $thumb->url();
           $tag->alt     = $tag->alt     ?? $tag->file->alt()->or(' ')->value();
           $tag->title   = $tag->title   ?? $tag->file->title()->value();
