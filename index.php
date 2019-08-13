@@ -24,7 +24,7 @@ Kirby::plugin('splendorr/imagetag', [
       'html' => function ($tag) {
         if ($tag->file = $tag->file($tag->value)) {
           if ($tag->file->extension() === 'gif') {
-            $thumb = $tag->file->url();
+            $thumb = $tag->file;
           } else {
             $maxwidth = $tag->maxwidth ?? option('splendorr.imagetag.maxwidth');
             $thumb = $tag->file->thumb([
